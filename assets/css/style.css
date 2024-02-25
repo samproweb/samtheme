@@ -38,6 +38,7 @@ body {
   text-align: left;
   background-color: #fff;
   overflow-x: hidden;
+  position: relative;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -472,10 +473,12 @@ mark,
 /*********** MENU ***********/
 header{
     z-index: 999;
-    position: relative;
+    position: absolute;
     width: 100%;
     background-color: transparent;
     padding: 10px 0;
+    left: 0;
+    top: 0;
 }
 .navbar-expand-lg .navbar-collapse{
     flex-direction: column;
@@ -488,7 +491,11 @@ header{
     font-weight: 700;
     text-transform: uppercase;
     color: #090909;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    padding: 10px 26px;
+}
+.navbar-expand-lg .navbar-nav .nav-link:last-child{
+  padding-right: 0;
 }
 .callus-zone{
     display: flex;
@@ -557,14 +564,18 @@ footer .logo-footer img{
     position: relative;
     overflow: hidden;
     background-color: var(--primary-color);
-    height: 700px;
+    padding-top: 10rem;
+    padding-bottom: 3rem;
 }
 .section-diapo:before{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 30%;
-    right: 0;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 45%;
+  right: -12%;
+  top: 0;
+  background: #ebe9ab;
+  transform: skewX(-10deg);
 }
 .section-diapo .title_top{
     text-align: center;
@@ -607,4 +618,35 @@ footer .logo-footer img{
     font-weight: 800;
     font-size: 18px;
 }
+.diapo_bigimg{
+    padding: 20px;
+}
+.diapo_bigimg img{
+  height: 525px;
+  width: auto;
+  filter: drop-shadow(5.5px 9.526px 250px rgba(12, 13, 12, 0.3));
+  -webkit-filter: drop-shadow(5.5px 9.526px 250px rgba(12, 13, 12, 0.3));
+}
+.spic{
+  position: absolute;
+}
+.spic.pic1{
+  bottom: 20%;
+  right: 6%;
+}
+.spic.pic2{
+left: 8%;
+top: 25%;
+}
+.spic.pic3{
+  right: 45%;
+  top: 20%;
+}
+.spic.pic4{
+  left: 50%;
+  bottom: 5%;
+}
+
 /***********  ***********/
+
+
