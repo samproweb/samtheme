@@ -10,12 +10,17 @@
 	
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Seaweed+Script&display=swap" rel="stylesheet">
-
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
     
@@ -59,34 +64,111 @@
 
     <!---------------- DIAPO ---------------->
     <section class="section-diapo">
-        <div class="spic pic1"><img src="assets/img/diapo-leaf.webp" alt="diapo dish"></div>
-        <div class="spic pic2"><img src="assets/img/diapo-leaf2.webp" alt="diapo dish"></div>
-        <div class="spic pic3"><img src="assets/img/diapo-pasta.webp" alt="diapo dish"></div>
-        <div class="spic pic4"><img src="assets/img/diapo-tomato.webp" alt="diapo dish"></div>
+        <div class="spic pic1" data-aos="zoom-in-left"><img src="assets/img/diapo-leaf.webp" alt="diapo dish"></div>
+        <div class="spic pic2" data-aos="zoom-in-right"><img src="assets/img/diapo-leaf2.webp" alt="diapo dish"></div>
+        <div class="spic pic3" data-aos="zoom-in-down"><img src="assets/img/diapo-pasta.webp" alt="diapo dish"></div>
+        <div class="spic pic4" data-aos="zoom-in-up"><img src="assets/img/diapo-tomato.webp" alt="diapo dish"></div>
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="title_top">
-                        <div class="sup_title">Are You Hungry?</div>
-                        <h1>Don't Wait!</h1>
-                        <div class="sub_title">Let start to order food now</div>
+                        <div class="sup_title" data-aos="fade-right" data-aos-delay="200">Are You Hungry?</div>
+                        <h1 data-aos="fade-right" data-aos-delay="600">Don't Wait!</h1>
+                        <div class="sub_title" data-aos="fade-right" data-aos-delay="1000">Let start to order food now</div>
                     </div>
-                    <div class="title_bottom">
+                    <div class="title_bottom" data-aos="fade-up" data-aos-delay="1200">
                         <div class="destitle_left">This Monday<br>Happy Hours</div>
                         <div class="destitle_right">1+1=3</div>
                     </div>
-                    <div class="deslink text-center">
+                    <div class="deslink text-center" data-aos="fade-up" data-aos-delay="1500">
                         <a href="#" class="s_link style1">Order now</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="diapo_bigimg">
+                    <div class="diapo_bigimg" data-aos="zoom-in" data-aos-delay="600">
                         <img src="assets/img/diapo-dish.webp" alt="diapo dish" class="img-fluid">
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!--------------- SECTION 1 ---------------->
+    <section class="section section1">
+        <div class="bg__1" data-aos="fade-right" data-aos-delay="500" style="background-image: url(assets/img/spaghetti.webp);"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 text-center">
+                    <div class="section-title" data-aos="fade-up">
+                        <h2 class="h2">Choose & Enjoy</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                    </div>
+                </div>
+            </div>
+      
+            <div class="row list_menu">
+                <div class="col-lg-4">
+                    <div class="menu_box text-center" data-aos="fade-up" data-aos-delay="200">
+                        <img src="assets/img/dish-1.webp" alt="dish1">
+                        <h3>Lorem ipsum dolor</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                        <a href="#" class="s_link style2">Order now</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="menu_box text-center" data-aos="fade-up" data-aos-delay="400">
+                        <img src="assets/img/dish-2.webp" alt="dish2">
+                        <h3>Lorem ipsum dolor</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                        <a href="#" class="s_link style2">Order now</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="menu_box text-center" data-aos="fade-up" data-aos-delay="600">
+                        <img src="assets/img/dish-3.webp" alt="dish3">
+                        <h3>Lorem ipsum dolor</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                        <a href="#" class="s_link style2">Order now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!--------------- SECTION 2 ---------------->
+     <section class="section section2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 text-center">
+                    <div class="section-title" data-aos="fade-up">
+                        <div class="under-title">Discover</div>
+                        <h2 class="h2">Upcoming Events</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.  </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-12">
+                    <div class="owlGallery">
+                        <div class="gallery_item">
+                            <a href="#"></a><img src="assets/img/gallery-1.webp" alt="gallery 1">
+                        </div>
+                        <div class="gallery_item">
+                            <a href="#"></a><img src="assets/img/gallery-2.webp" alt="gallery 2">
+                        </div>
+                        <div class="gallery_item">
+                            <a href="#"></a><img src="assets/img/gallery-3.webp" alt="gallery 3">
+                        </div>
+                        <div class="gallery_item">
+                            <a href="#"></a><img src="assets/img/gallery-3.webp" alt="gallery 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
 
     <!--------------- FOOTER ---------------->
     <footer>
@@ -132,5 +214,8 @@
     
 </body>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
 <script src="assets/js/custom.js"></script>
+
 </html>

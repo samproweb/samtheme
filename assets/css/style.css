@@ -419,6 +419,27 @@ mark,
 .text-justify{
     text-align: justify !important;
 }
+.section{
+  position: relative;
+  padding: 60px 0;
+}
+.p-0{
+  padding: 0 !important;
+}
+/*********** KEYFRAMES ************/
+@keyframes diapoBefore {
+  from {right: -120%;} to {right: -12%;}
+}
+@-webkit-keyframes diapoBefore {
+  from {right: -120%;} to {right: -12%;}
+}
+@keyframes diapoSpics {
+  0% {transform: scale(0.5);} 50% {transform: scale(100%);} 0% {transform: scale(0.5);}
+}
+@-webkit-keyframes diapoBefore {
+  0% {transform: scale(0.5);} 50% {transform: scale(100%);} 0% {transform: scale(0.5);}
+}
+
 /*********** BUTTON ************/
 .s_link{
     display: inline-block;   
@@ -441,7 +462,7 @@ mark,
     color: var(--primary-color);
     background-color: #000;
 }
-.s_link.style2{
+.s_link.style2:hover{
     color: var(--primary-color);
     background-color: #000;
 }
@@ -576,6 +597,7 @@ footer .logo-footer img{
   top: 0;
   background: #ebe9ab;
   transform: skewX(-10deg);
+  animation: 3s ease-in diapoBefore;
 }
 .section-diapo .title_top{
     text-align: center;
@@ -630,6 +652,9 @@ footer .logo-footer img{
 .spic{
   position: absolute;
 }
+.spic img{
+  animation: diapoSpics 15s ease-in infinite;
+}
 .spic.pic1{
   bottom: 20%;
   right: 6%;
@@ -647,6 +672,89 @@ top: 25%;
   bottom: 5%;
 }
 
-/***********  ***********/
+/*********** Section title ***********/
+.section-title{
+  padding-bottom: 45px;
+}
+.section-title .h2{
+  font-family: "Fredericka the Great", serif;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.section-title .under-title{
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+/*********** SECTION 1 ***********/
+.list_menu{
+  position: relative;
+}
+.list_menu::before{
+  content: '';
+  position: absolute;
+  height: 150px;
+  width: 200%;
+  left: -50%;
+  top: 75px;
+  background-color: #e7e5a9;
+}
+.menu_box{
+  height: 100%;
+  padding: 0 15px;
+}
+.menu_box img{
+  filter: drop-shadow(14.5px 25.115px 38px rgba(12, 13, 12, 0.36));
+  -webkit-filter: drop-shadow(14.5px 25.115px 38px rgba(12, 13, 12, 0.36));
+  height: 300px;
+    margin-bottom: 30px;
+    transition: 0.3s ease-in-out;
+}
+.menu_box h3{
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.bg__1{
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  left: -130px;
+  top: -120px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.menu_box:hover img{
+  transform: scale(1.1);
+}
+/*********** SECTION 2 ***********/
 
-
+.gallery_item{
+  height: 320px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 26px 0;
+  transition: 0.3s ease-in-out;
+}
+.gallery_item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.gallery_item a{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+.owlGallery .slick-center .gallery_item a{
+  background-color: transparent;
+}
+.owlGallery .slick-center .gallery_item{
+  transform: scale(1.1);
+  z-index: 3;
+}
